@@ -102,14 +102,6 @@ console.log(splitMe("I love coding"));
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
-const deleteOne = function (string, booleano) {
-  if (booleano) {
-    return string.substring(1);
-  } else {
-    return string.slice(0, -1);
-  }
-};
-
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
@@ -197,30 +189,66 @@ console.log(onlyLetter("I have 4 dogs"));
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+const containerH1 = document.getElementById("container");
+
+console.dir(containerH1);
+console.log(containerH1);
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
+const tableTd = document.querySelectorAll("td");
+
+console.dir(tableTd);
+console.log(tableTd);
+
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+
+const tabellaTd = document.querySelectorAll("td");
+for (let i = 0; i < tabellaTd.length; i++) {
+  console.log(tabellaTd[i].innerText);
+}
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+const links = document.querySelectorAll("a");
+links.forEach((link) => {
+  link.style.backgroundColor = "red";
+});
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const ul = document.getElementById("myList");
+const li = document.createElement("li");
+li.innerText = "Elememto 5";
+ul.appendChild(li);
+
+console.dir(ul);
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+/*
+const ul = document.getElementById("myList");
+ul.remove()
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+const tabellaTr = document.querySelectorAll("tr");
+
+tabellaTr.forEach((riga) => {
+  riga.classList.add("test");
+});
+console.dir(tabellaTr);
 
 // [EXTRA] JS Avanzato
 
