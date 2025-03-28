@@ -92,10 +92,11 @@ console.log(whoIsBigger(10, 5));
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-/*const splitMe = function (coding) {
-  return splitMe.split(" ");
+const splitMe = function (stringa) {
+  words = stringa.split(" ");
+  return words;
 };
-console.log(splitMe("I love coding"));
+console.log(splitMe("I Love Coding"));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
@@ -247,9 +248,11 @@ console.dir(ul);
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
-/*
-const ul = document.getElementById("myList");
-ul.remove()
+
+const deleteUl = document.getElementById("myList");
+deleteUl.innerHTML = "";
+
+console.dir(deleteUl);
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
@@ -260,7 +263,7 @@ const tabellaTr = document.querySelectorAll("tr");
 tabellaTr.forEach((riga) => {
   riga.classList.add("test");
 });
-console.dir(tabellaTr);
+console.dir();
 
 // [EXTRA] JS Avanzato
 
