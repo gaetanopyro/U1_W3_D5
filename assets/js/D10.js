@@ -102,6 +102,17 @@ console.log(splitMe("I love coding"));
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
+function deleteOne(stringa, booleano) {
+  if (booleano) {
+    return stringa.substring(1);
+  } else {
+    return stringa.slice(0, -1);
+  }
+}
+
+console.log(deleteOne("Luca", true));
+console.log(deleteOne("Luca", false));
+
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
@@ -116,6 +127,7 @@ console.log(onlyLetter("I have 4 dogs"));
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+//const isThisAnEmail = function(stringa) {
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
