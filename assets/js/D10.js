@@ -69,9 +69,22 @@ console.log(me.skills);
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+const dice = function () {
+  return Math.floor(Math, random() * 6) + 1;
+};
+
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
+const whoIsBigger = function (num1, num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+};
+console.log(whoIsBigger(10, 5));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -79,16 +92,34 @@ console.log(me.skills);
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
+/*const splitMe = function (coding) {
+  return splitMe.split(" ");
+};
+console.log(splitMe("I love coding"));
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+const deleteOne = function (string, booleano) {
+  if (booleano) {
+    return string.substring(1);
+  } else {
+    return string.slice(0, -1);
+  }
+};
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+
+const onlyLetter = function (string) {
+  return string.replace(/[0-9]/g, "");
+};
+console.log(onlyLetter("I have 4 dogs"));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
